@@ -19,6 +19,7 @@ app.get('/api/city/:city', async (req, res) => {
             });
         } 
     } catch (err) {
+        err.message = 'Error!  Request not Found!'; // Error messages required on servers to avoid crash
         console.log(err);
     } 
 });
